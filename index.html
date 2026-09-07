@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Alarm</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <h1>⏰ My Alarm</h1>
+
+    <div id="clock">00:00:00</div>
+    <div id="date">กำลังโหลด...</div>
+
+    <section class="set-alarm">
+
+      <h2>ตั้งปลุก</h2>
+
+      <input type="time" id="alarmTime">
+
+      <input
+        type="text"
+        id="alarmName"
+        placeholder="ชื่อปลุก เช่น ตื่นไปโรงเรียน"
+      >
+
+      <button id="setAlarmButton">
+        ＋ ตั้งปลุก
+      </button>
+
+    </section>
+
+    <section>
+
+      <h2>การปลุกของฉัน</h2>
+
+      <div id="alarmList">
+        <p class="empty">
+          ยังไม่มีการตั้งปลุก
+        </p>
+      </div>
+
+    </section>
+
+    <p id="status"></p>
+
+  </main>
+
+
+  <!-- หน้าต่างตอนปลุก -->
+
+  <div id="alarmModal" class="modal">
+
+    <div class="modal-content">
+
+      <div class="ring">⏰</div>
+
+      <h2 id="ringingName">
+        ถึงเวลาปลุกแล้ว!
+      </h2>
+
+      <p id="ringingTime"></p>
+
+      <button id="stopButton">
+        หยุดปลุก
+      </button>
+
+      <button id="snoozeButton" class="snooze">
+        😴 Snooze 5 นาที
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
