@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: #f3f0ff;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  color: #292536;
+}
+
+
+.app {
+  width: 100%;
+  max-width: 430px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+h1 {
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  font-size: 28px;
+}
+
+
+#clock {
+  text-align: center;
+
+  font-size: 52px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 5px;
+}
+
+
+#date {
+  text-align: center;
+
+  color: #777;
+
+  margin-bottom: 30px;
+}
+
+
+section {
+  margin-top: 25px;
+}
+
+
+h2 {
+  font-size: 18px;
+
+  margin-bottom: 12px;
+}
+
+
+input {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-bottom: 10px;
+
+  border: 2px solid #e5e2ee;
+
+  border-radius: 14px;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+
+input:focus {
+  border-color: #7c5cff;
+}
+
+
+button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #7c5cff;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+.alarm {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 16px;
+
+  margin-bottom: 10px;
+
+  background: #f5f3ff;
+
+  border-radius: 18px;
+}
+
+
+.alarm-info {
+  flex: 1;
+}
+
+
+.alarm-time {
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+
+.alarm-name {
+  color: #777;
+
+  margin-top: 3px;
+}
+
+
+.delete-button {
+  width: auto;
+
+  padding: 9px 12px;
+
+  background: #ff6b6b;
+
+  font-size: 14px;
+}
+
+
+.empty {
+  text-align: center;
+
+  color: #999;
+
+  padding: 20px;
+}
+
+
+#status {
+  text-align: center;
+
+  margin-top: 20px;
+
+  color: #6c5ce7;
+
+  font-weight: bold;
+}
+
+
+@media (max-width: 400px) {
+
+  #clock {
+    font-size: 42px;
+  }
+
+  .app {
+    padding: 22px;
+  }
+
+}
