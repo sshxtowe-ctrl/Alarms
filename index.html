@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ระบบแจ้งเตือนการยืมของ</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <!-- =====================================
+         หัวเว็บไซต์
+    ====================================== -->
+
+    <h1>📦 แจ้งเตือนการยืมของ</h1>
+
+    <div id="clock">
+      00:00:00
+    </div>
+
+    <div id="date">
+      กำลังโหลด...
+    </div>
+
+
+    <!-- =====================================
+         ตั้งรายการยืมของ
+    ====================================== -->
+
+    <section>
+
+      <h2>เพิ่มรายการยืมของ</h2>
+
+
+      <label for="borrowerName">
+        ชื่อคนยืม
+      </label>
+
+      <input
+        type="text"
+        id="borrowerName"
+        placeholder="เช่น น้องน้ำ"
+      >
+
+
+      <label for="itemName">
+        ของที่ยืม
+      </label>
+
+      <input
+        type="text"
+        id="itemName"
+        placeholder="เช่น หนังสือฟิสิกส์"
+      >
+
+
+      <label for="alarmTime">
+        เวลาแจ้งเตือน
+      </label>
+
+      <input
+        type="time"
+        id="alarmTime"
+      >
+
+
+      <button id="setAlarmButton">
+        ＋ เพิ่มรายการ
+      </button>
+
+    </section>
+
+
+    <!-- =====================================
+         รายการยืมของ
+    ====================================== -->
+
+    <section>
+
+      <h2>รายการยืมของ</h2>
+
+      <div id="alarmList">
+
+        <p class="empty">
+          ยังไม่มีรายการยืมของ
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         สถานะ
+    ====================================== -->
+
+    <p id="status"></p>
+
+  </main>
+
+
+  <!-- =====================================
+       หน้าต่างแจ้งเตือน
+  ====================================== -->
+
+  <div
+    id="alarmModal"
+    class="modal"
+  >
+
+    <div class="modal-content">
+
+      <div class="ring">
+        🔔
+      </div>
+
+
+      <h2 id="ringingName">
+        ถึงเวลาแจ้งเตือนแล้ว!
+      </h2>
+
+
+      <p id="ringingItem"></p>
+
+
+      <p id="ringingTime"></p>
+
+
+      <button id="stopButton">
+        หยุดแจ้งเตือน
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
