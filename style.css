@@ -1,0 +1,505 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background: #f3f0ff;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  color: #292536;
+
+}
+
+
+/* ========================================
+   กล่องหลัก
+======================================== */
+
+.app {
+
+  width: 100%;
+
+  max-width: 430px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* ========================================
+   หัวข้อ
+======================================== */
+
+h1 {
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+  font-size: 26px;
+
+}
+
+
+h2 {
+
+  font-size: 18px;
+
+  margin-bottom: 14px;
+
+}
+
+
+/* ========================================
+   นาฬิกา
+======================================== */
+
+#clock {
+
+  text-align: center;
+
+  font-size: 52px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 5px;
+
+}
+
+
+#date {
+
+  text-align: center;
+
+  color: #777;
+
+  margin-bottom: 30px;
+
+}
+
+
+/* ========================================
+   Section
+======================================== */
+
+section {
+
+  margin-top: 25px;
+
+}
+
+
+/* ========================================
+   Label
+======================================== */
+
+label {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  color: #555;
+
+}
+
+
+/* ========================================
+   Input
+======================================== */
+
+input {
+
+  width: 100%;
+
+  padding: 14px;
+
+  margin-bottom: 12px;
+
+  border:
+    2px solid #e5e2ee;
+
+  border-radius: 14px;
+
+  font-size: 16px;
+
+  outline: none;
+
+}
+
+
+input:focus {
+
+  border-color: #7c5cff;
+
+}
+
+
+/* ========================================
+   ปุ่ม
+======================================== */
+
+button {
+
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #7c5cff;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+
+button:hover {
+
+  opacity: 0.9;
+
+}
+
+
+/* ========================================
+   รายการยืมของ
+======================================== */
+
+.alarm {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 16px;
+
+  margin-bottom: 10px;
+
+  background: #f5f3ff;
+
+  border-radius: 18px;
+
+}
+
+
+.alarm-info {
+
+  flex: 1;
+
+  min-width: 0;
+
+}
+
+
+.alarm-time {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+}
+
+
+.alarm-name {
+
+  margin-top: 4px;
+
+  font-weight: bold;
+
+}
+
+
+.borrower {
+
+  color: #6c5ce7;
+
+  margin-top: 3px;
+
+}
+
+
+.item {
+
+  color: #777;
+
+  margin-top: 3px;
+
+}
+
+
+/* ========================================
+   Toggle
+======================================== */
+
+.toggle {
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  width: 52px;
+
+  height: 30px;
+
+  padding: 0;
+
+  border-radius: 30px;
+
+  background: #ccc;
+
+}
+
+
+.toggle.on {
+
+  background: #7c5cff;
+
+}
+
+
+.toggle-circle {
+
+  position: absolute;
+
+  top: 4px;
+
+  left: 4px;
+
+  width: 22px;
+
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  transition: 0.2s;
+
+}
+
+
+.toggle.on .toggle-circle {
+
+  left: 26px;
+
+}
+
+
+/* ========================================
+   ปุ่มลบ
+======================================== */
+
+.delete-button {
+
+  width: auto;
+
+  flex-shrink: 0;
+
+  padding: 9px 12px;
+
+  background: #ff6b6b;
+
+  font-size: 14px;
+
+}
+
+
+/* ========================================
+   ไม่มีรายการ
+======================================== */
+
+.empty {
+
+  text-align: center;
+
+  color: #999;
+
+  padding: 20px;
+
+}
+
+
+/* ========================================
+   Status
+======================================== */
+
+#status {
+
+  text-align: center;
+
+  margin-top: 20px;
+
+  color: #6c5ce7;
+
+  font-weight: bold;
+
+}
+
+
+/* ========================================
+   Modal
+======================================== */
+
+.modal {
+
+  position: fixed;
+
+  inset: 0;
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    rgba(0, 0, 0, 0.45);
+
+  z-index: 999;
+
+}
+
+
+.modal.show {
+
+  display: flex;
+
+}
+
+
+.modal-content {
+
+  width: 100%;
+
+  max-width: 380px;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.2);
+
+}
+
+
+.ring {
+
+  font-size: 55px;
+
+  margin-bottom: 15px;
+
+}
+
+
+#ringingName {
+
+  margin-bottom: 10px;
+
+}
+
+
+#ringingItem {
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  margin-bottom: 5px;
+
+}
+
+
+#ringingTime {
+
+  color: #777;
+
+  margin-bottom: 20px;
+
+}
+
+
+/* ========================================
+   มือถือ
+======================================== */
+
+@media (max-width: 400px) {
+
+  #clock {
+
+    font-size: 42px;
+
+  }
+
+
+  .app {
+
+    padding: 22px;
+
+  }
+
+
+  .alarm {
+
+    padding: 13px;
+
+  }
+
+
+  .alarm-time {
+
+    font-size: 24px;
+
+  }
+
+}
